@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio • Châu Ngọc Phát</title>
+    <meta
+      name="description"
+      content="Portfolio cá nhân: Front-end / Mobile Developer (React, React Native, Flutter)."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#home">
+          <img class="logo" src="img/logo.png" alt="" />
+          <span class="name">Portfolio</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Trang chủ</a>
+          <a href="#about">Giới thiệu</a>
+          <a href="#skills">Kỹ năng</a>
+          <a href="#projects">Dự án</a>
+          <a href="#experience">Kinh nghiệm</a>
+          <a href="#contact">Liên hệ</a>
+        </nav>
+        <div class="actions">
+          <button class="icon-btn" id="themeToggle">
+            <i data-lucide="moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="hero container">
+      <div class="hero-grid">
+        <div>
+          <h1 class="title">
+            Xin chào, tôi là <br />
+            <strong>Châu Ngọc Phát</strong>
+          </h1>
+          <h2 class="typing" id="typingText"></h2>
+          <p class="subtitle">
+            Tôi đam mê việc xây dựng sản phẩm số đẹp, tối ưu và dễ sử dụng, từ
+            website cho đến ứng dụng di động. Ngoài ra, tôi còn quan tâm đến
+            backend cơ bản để hiểu rõ quy trình phát triển toàn diện của một sản
+            phẩm.
+          </p>
+          <div class="cta">
+            <a href="#projects" class="btn">Xem dự án</a>
+            <a href="#" class="btn btn-outline">Tải CV</a>
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="avatar-wrapper">
+            <img src="./img/avar.jpg" alt="Avatar" />
+            <div class="sparkles"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container">
+      <h2 class="section-title">Kỹ năng</h2>
+
+      <!-- Frontend -->
+      <h3>Frontend</h3>
+      <div class="stack">
+        <span class="pill">HTML</span>
+        <span class="pill">CSS</span>
+        <span class="pill">Bootstrap 5</span>
+        <span class="pill">React</span>
+        <span class="pill">React Native</span>
+        <span class="pill">Flutter</span>
+        <span class="pill">Figma</span>
+        <span class="pill">Canva</span>
+        <span class="pill">SEO Website</span>
+      </div>
+
+      <!-- Backend -->
+      <h3>Backend</h3>
+      <div class="stack">
+        <span class="pill">Node.js</span>
+        <span class="pill">Java</span>
+        <span class="pill">Kotlin</span>
+        <span class="pill">MongoDB</span>
+        <span class="pill">MySQL</span>
+        <span class="pill">Firebase</span>
+        <span class="pill">Postman</span>
+      </div>
+
+      <!-- Tools -->
+      <h3>Công cụ</h3>
+      <div class="stack">
+        <span class="pill">Git/GitHub/GitLab</span>
+        <span class="pill">VS Code</span>
+        <span class="pill">Android Studio</span>
+      </div>
+    </section>
+
+    <section id="soft-skills" class="container">
+      <h2 class="section-title">Kỹ năng mềm</h2>
+      <div class="stack">
+        <span class="pill">Làm việc nhóm</span>
+        <span class="pill">Giao tiếp</span>
+        <span class="pill">Quản lý thời gian</span>
+        <span class="pill">Giải quyết vấn đề</span>
+        <span class="pill">Thuyết trình</span>
+        <span class="pill">Tự học & thích ứng</span>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2 class="section-title">Dự án</h2>
+      <div class="grid grid-3">
+        <div class="card project">
+          <div class="thumb">
+            <img src="img/DA1.png" alt="" />
+          </div>
+          <div class="body">
+            <h3>Ứng dụng giao dịch cây trồng</h3>
+            <p>
+              Phát triển bằng React, hỗ trợ đăng tin, tìm kiếm và giao dịch sản
+              phẩm nông nghiệp.
+            </p>
+          </div>
+        </div>
+        <div class="card project">
+          <div class="thumb">
+            <img src="img/DA2.jpg" />
+          </div>
+          <div class="body">
+            <h3>Ứng dụng quản lý cửa hàng thực phẩm</h3>
+            <p>
+              Phát triển trên React + Node.js với giao diện quản lý sản phẩm,
+              doanh thu.
+              <a
+                href="https://github.com/thungan610/DuAnTotNghiep1.git"
+                target="_blank"
+                >Xem GitHub</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="card project">
+          <div class="thumb">
+            <img src="img/DA3.jpg" alt="" />
+          </div>
+          <div class="body">
+            <h3>Ứng dụng quản lý cửa hàng mỹ phẩm</h3>
+            <p>
+              Phát triển trên Flutter.
+              <a
+                href="https://gitlab.com/omni.channel/mobile-cds/fpoly-fa/app_ft_beauty.git"
+                target="_blank"
+                >Xem GitLab</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="container">
+      <h2 class="section-title">Kinh nghiệm</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Sinh viên FPT Polytechnic</h3>
+          <p>02/2024 – 06/2024</p>
+          <ul>
+            <li>Phát triển ứng dụng giao dịch cây trồng bằng React.</li>
+            <li>Xây dựng trang web quản trị với Bootstrap 5 & CSS.</li>
+            <li>Phát triển tính năng ứng dụng bằng Kotlin + Node.js.</li>
+            <li>Phát triển ứng dụng trò chuyện bằng React.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>Nhân viên kinh doanh - Công ty TNHH DV & TM NINA</h3>
+          <p>01/2025 – 07/2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2 class="section-title">Liên hệ</h2>
+      <div class="contact-list">
+        <a href="mailto:cphat774@gmail.com"
+          ><i data-lucide="mail"></i> cphat774@gmail.com</a
+        >
+        <a href="tel:+84386706637"><i data-lucide="phone"></i> 0386 706 637</a>
+        <a href="https://github.com/ngocphat922004" target="_blank"
+          ><i data-lucide="github"></i> GitHub</a
+        >
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2025 Châu Ngọc Phát | All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
