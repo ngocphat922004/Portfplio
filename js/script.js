@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     html.setAttribute("data-theme", savedTheme);
-    themeToggle.innerHTML = `<i data-lucide='${savedTheme === "dark" ? "sun" : "moon"}'></i>`;
+    themeToggle.innerHTML = `<i data-lucide='${
+      savedTheme === "dark" ? "sun" : "moon"
+    }'></i>`;
   }
 
   themeToggle.addEventListener("click", () => {
@@ -14,50 +16,59 @@ document.addEventListener("DOMContentLoaded", () => {
     const next = current === "dark" ? "light" : "dark";
     html.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
-    themeToggle.innerHTML = `<i data-lucide='${next === "dark" ? "sun" : "moon"}'></i>`;
+    themeToggle.innerHTML = `<i data-lucide='${
+      next === "dark" ? "sun" : "moon"
+    }'></i>`;
     lucide.createIcons();
-
   });
 
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll("#navLinks a");
   window.addEventListener("scroll", () => {
     let current = "";
-    sections.forEach(sec => {
+    sections.forEach((sec) => {
       const rect = sec.getBoundingClientRect();
       if (rect.top <= 120 && rect.bottom >= 120) {
         current = sec.getAttribute("id");
       }
     });
-    navLinks.forEach(link => {
-      link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+    navLinks.forEach((link) => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute("href") === `#${current}`
+      );
     });
   });
 
-  navLinks.forEach(link => {
-    link.addEventListener("click", e => {
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
-      document.querySelector(link.getAttribute("href"))
-              .scrollIntoView({ behavior: "smooth" });
+      document
+        .querySelector(link.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
     });
   });
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
   const progressBar = document.createElement("div");
   progressBar.id = "progressBar";
   document.body.appendChild(progressBar);
   window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const progress = (scrollTop / docHeight) * 100;
     progressBar.style.width = `${progress}%`;
   });
@@ -66,17 +77,19 @@ document.addEventListener("DOMContentLoaded", () => {
   backToTop.id = "backToTop";
   backToTop.innerHTML = `<i data-lucide="arrow-up"></i>`;
   document.body.appendChild(backToTop);
-  backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  backToTop.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
   window.addEventListener("scroll", () => {
     backToTop.classList.toggle("show", window.scrollY > 400);
   });
 
   if (typingText) {
     const texts = [
-      "Mình là Frontend Developer ",
-      "Mình yêu thích UI/UX Design ",
-      "Web/Mobile Developer ",
-      "Freelancer & Creator "
+      "Mình là Backend Developer.",
+      "Mình xây dựng API và hệ thống server bằng Node.js & Java.",
+      "Mình hiểu về cơ sở dữ liệu MySQL, MongoDB và Firebase.",
+      "Mình quan tâm đến hiệu năng, bảo mật và trải nghiệm người dùng.",
     ];
 
     let index = 0;
