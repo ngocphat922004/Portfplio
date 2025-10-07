@@ -121,8 +121,9 @@ body {
 
 /* Cột chữ */
 .hero-grid > div:first-child{
-  flex:1 1 480px;               /* Rộng ưu tiên cho chữ, vẫn co giãn */
-  min-width:280px;
+  flex: 1 1 520px;
+  min-width: 320px;
+  max-width: 720px;             /* thêm max-width để an toàn */
 }
 
 /* Cột ảnh */
@@ -174,23 +175,15 @@ body {
   font-weight: 700;
   margin: 0 0 6px;
 }
-.typing {
-  font-size: 30px;
-  font-weight: 600;
-  border-right: 2px solid var(--text); 
-  white-space: nowrap;
-  overflow: hidden;
-  width: fit-content;
-  color: rgb(66, 66, 248);
-  display: inline-block;
-  min-height: 2rem; 
-  white-space: nowrap; 
-  margin: 6px 0 6px;
+.typing{
+  white-space: normal;          /* bỏ nowrap để được xuống dòng */
+  overflow-wrap: anywhere;      /* ngắt từ khi cần */
+  word-break: break-word;
+  width: auto;                  /* không giới hạn theo chiều ngang */
+  border-right: none;           /* (tuỳ chọn) bỏ caret nếu muốn */
 }
-.typing::after {
-  content: "|";
-  margin-left: 4px;
-  animation: blink 0.7s infinite;
+.typing::after{                 /* nếu vẫn muốn caret thì bỏ block này */
+  display: none;
 }
 @keyframes blink {
   50% { opacity: 0; }
