@@ -179,7 +179,8 @@ body {
   white-space: normal;          /* bỏ nowrap để được xuống dòng */
   overflow-wrap: anywhere;      /* ngắt từ khi cần */
   word-break: break-word;
-  width: auto;                  /* không giới hạn theo chiều ngang */
+  width: auto;         
+  color: #3b82f6;         /* không giới hạn theo chiều ngang */
   border-right: none;           /* (tuỳ chọn) bỏ caret nếu muốn */
 }
 .typing::after{                 /* nếu vẫn muốn caret thì bỏ block này */
